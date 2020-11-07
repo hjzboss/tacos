@@ -2,9 +2,8 @@ package tacos.web.api;
 
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
-import org.springframework.hateoas.Resource;
+import org.springframework.hateoas.EntityLinks;
 import org.springframework.hateoas.Resources;
-import org.springframework.hateoas.mvc.ControllerLinkBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,30 +13,34 @@ import tacos.data.TacoRepository;
 import java.util.List;
 import java.util.Optional;
 
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
+
 @RestController//返回json，相当于Controller上加了个ResponseBody
 @RequestMapping(path = "/design",
         produces = "application/json")//只会处理Accept头部包含"application/json"的请求
 @CrossOrigin(origins = "*")//允许跨域请求
 public class DesignTacoController {
     private final TacoRepository tacoRepository;
+    final EntityLinks entityLinks;
 
-    public DesignTacoController(TacoRepository tacoRepository) {
+    public DesignTacoController(TacoRepository tacoRepository, EntityLinks entityLinks) {
         this.tacoRepository = tacoRepository;
+        this.entityLinks = entityLinks;
     }
 
-    //    EntityLinks entityLinks
     /*返回最近12条订单信息，按时间降序排列*/
     @GetMapping("/recent")
-    public Resources<Resource<Taco>> recentTacos() {
+    public Resources<TacoResource> recentTacos() {
         PageRequest page = PageRequest.of(0, 12, Sort.by("createdAt").descending());
         List<Taco> content = tacoRepository.findAll(page).getContent();
-        Resources<Resource<Taco>> recentResources = Resources.wrap(content);
+
+        List<TacoResource> tacoResources = new TacoResourceAssembler().toResources(content);
+        Resources<TacoResource> recentResources = new Resources<>(tacoResources);
 
         recentResources.add(
-                ControllerLinkBuilder.linkTo(DesignTacoController.class)
-                .slash("recent")
-                .withRel("recents")
-        );
+            linkTo(methodOn(DesignTacoController.class).recentTacos())
+        .withRel("recents"));
 
         return recentResources;
     }
