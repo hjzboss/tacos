@@ -1,0 +1,6 @@
+logging:
+  level:
+    tacos: WARN
+taco:
+  orders:
+    pageSize: 10

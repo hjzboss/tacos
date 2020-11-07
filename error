@@ -1,0 +1,30 @@
+连接mysql报错：Public Key Retrieval is not allowed
+解决方法：mysql配置加上allowPublicKeyRetrieval=true，但是不安全
+
+log4j报错：No appenders could be found for logger
+解决方法：添加log4j配置文件
+        log4j.rootLogger=DEBUG, stdout
+        log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+        log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+        log4j.appender.stdout.layout.ConversionPattern=%5p [%t] - %m%n
+
+druid控制台打不开：在SecurityConfig中配置忽略/druid/**，在入口类添加支持Servlet的注解@ServletComponentScan
+
+配置druid连接池： 1.添加druid依赖，log4j的依赖
+                2.在配置文件中添加如下字段    dbcp2:
+                                    min-idle: 5         #数据库连接池的最小维持连接数
+                                    initial-size: 5     #初始化提供的连接数
+                                    max-total: 5          #最大的连接数
+                                    max-wait-millis: 200        #等待连接获取的最大超时时间
+                3.创建druid的配置类，log4j的配置文件
+
+使用@ConfigurationProperties(prefix = "taco.orders")时报springboot configuration processor not configured
+原因：spring默认使用yml中的配置，
+        但有时候要用传统的xml或properties配置，就需要使用spring-boot-configuration-processor了
+解决方法1：在pom文件中加入如下依赖：
+            		<dependency>
+            			<groupId>org.springframework.boot</groupId>
+            			<artifactId>spring-boot-configuration-processor</artifactId>
+            			<optional>true</optional>
+            		</dependency>
+或者加入@EnableConfigurationProperties注解

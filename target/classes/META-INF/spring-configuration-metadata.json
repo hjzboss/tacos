@@ -1,0 +1,29 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "tacos.DruidConfig",
+      "name": "spring.datasource",
+      "sourceMethod": "druidDataSource()",
+      "type": "javax.sql.DataSource"
+    },
+    {
+      "sourceType": "tacos.web.OrderProps",
+      "name": "taco.orders",
+      "type": "tacos.web.OrderProps"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "tacos.web.OrderProps",
+      "defaultValue": 20,
+      "name": "taco.orders.page-size",
+      "type": "java.lang.Integer"
+    },
+    {
+      "name": "taco.orders.pageSize",
+      "description": "sets the maximum number of orders to display in a list.",
+      "type": "java.lang.String"
+    }
+  ]
+}
