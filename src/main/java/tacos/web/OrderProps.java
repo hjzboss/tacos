@@ -10,8 +10,8 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 
 /*
-* 配置页数中的行数
-* */
+ * 配置页数中的行数
+ * */
 @EnableConfigurationProperties
 @Component
 @Data
@@ -20,7 +20,7 @@ import javax.validation.constraints.Min;
 @Validated
 public class OrderProps {
 
-    @Min(value = 5,message = "must be between 5 and 25")
-    @Max(value = 25,message = "must be between 5 and 25")
+    @Min(value = 5, message = "must be between 5 and 25")
+    @Max(value = 25, message = "must be between 5 and 25")
     private int pageSize = 20;
 }

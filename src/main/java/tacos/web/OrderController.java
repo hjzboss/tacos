@@ -19,63 +19,63 @@ import javax.validation.Valid;
 @SessionAttributes("order")
 public class OrderController {
 
-  private final OrderProps props;
-  private OrderRepository orderRepo;
+    private final OrderProps props;
+    private final OrderRepository orderRepo;
 
-  public OrderController(OrderRepository orderRepo, OrderProps props) {
-    this.orderRepo = orderRepo;
-    this.props = props;
-  }
-  
-  @GetMapping("/current")
-  public String orderForm(@AuthenticationPrincipal User user, 
-      @ModelAttribute Order order) {
-    if (order.getDeliveryName() == null) {
-      order.setDeliveryName(user.getFullname());
+    public OrderController(OrderRepository orderRepo, OrderProps props) {
+        this.orderRepo = orderRepo;
+        this.props = props;
     }
-    if (order.getDeliveryStreet() == null) {
-      order.setDeliveryStreet(user.getStreet());
-    }
-    if (order.getDeliveryCity() == null) {
-      order.setDeliveryCity(user.getCity());
-    }
-    if (order.getDeliveryState() == null) {
-      order.setDeliveryState(user.getState());
-    }
-    if (order.getDeliveryZip() == null) {
-      order.setDeliveryZip(user.getZip());
-    }
-    
-    return "orderForm";
-  }
 
-  // tag::processOrderWithAuthenticationPrincipal[]
-  @PostMapping
-  public String processOrder(@Valid Order order, Errors errors, 
-      SessionStatus sessionStatus, 
-      @AuthenticationPrincipal User user) {
-    
-    if (errors.hasErrors()) {
-      return "orderForm";
+    @GetMapping("/current")
+    public String orderForm(@AuthenticationPrincipal User user,
+                            @ModelAttribute Order order) {
+        if (order.getDeliveryName() == null) {
+            order.setDeliveryName(user.getFullname());
+        }
+        if (order.getDeliveryStreet() == null) {
+            order.setDeliveryStreet(user.getStreet());
+        }
+        if (order.getDeliveryCity() == null) {
+            order.setDeliveryCity(user.getCity());
+        }
+        if (order.getDeliveryState() == null) {
+            order.setDeliveryState(user.getState());
+        }
+        if (order.getDeliveryZip() == null) {
+            order.setDeliveryZip(user.getZip());
+        }
+
+        return "orderForm";
     }
-    
-    order.setUser(user);
-    
-    orderRepo.save(order);
-    sessionStatus.setComplete();
-    
-    return "redirect:/";
-  }
-  // end::processOrderWithAuthenticationPrincipal[]
 
-  @GetMapping
-  public String ordersForUser(
-          @AuthenticationPrincipal User user, Model model) {
+    // tag::processOrderWithAuthenticationPrincipal[]
+    @PostMapping
+    public String processOrder(@Valid Order order, Errors errors,
+                               SessionStatus sessionStatus,
+                               @AuthenticationPrincipal User user) {
 
-    Pageable pageable = PageRequest.of(0, props.getPageSize());
-    model.addAttribute("orders",
-            orderRepo.findByUserOrderByPlacedAtDesc(user, pageable));
+        if (errors.hasErrors()) {
+            return "orderForm";
+        }
 
-    return "orderList";
-  }
+        order.setUser(user);
+
+        orderRepo.save(order);
+        sessionStatus.setComplete();
+
+        return "redirect:/";
+    }
+    // end::processOrderWithAuthenticationPrincipal[]
+
+    @GetMapping
+    public String ordersForUser(
+            @AuthenticationPrincipal User user, Model model) {
+
+        Pageable pageable = PageRequest.of(0, props.getPageSize());
+        model.addAttribute("orders",
+                orderRepo.findByUserOrderByPlacedAtDesc(user, pageable));
+
+        return "orderList";
+    }
 }

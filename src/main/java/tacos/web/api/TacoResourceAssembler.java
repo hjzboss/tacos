@@ -7,7 +7,7 @@ import tacos.Taco;
 public class TacoResourceAssembler extends ResourceAssemblerSupport<Taco, TacoResource> {
     //在创建TacoResource中的连接时将会使用DesignTacoController来确定所有URL的基础
     public TacoResourceAssembler() {
-        super(DesignTacoController.class, TacoResource.class);
+        super(DesignTacoController1.class, TacoResource.class);
     }
 
     //创建对象，提供链接

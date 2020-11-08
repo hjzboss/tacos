@@ -1,5 +1,7 @@
 package tacos;
+
 import lombok.Data;
+import org.springframework.data.rest.core.annotation.RestResource;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -9,24 +11,25 @@ import java.util.List;
 
 @Data
 @Entity
+@RestResource(rel = "tacos", path = "tacos")
 public class Taco {
 
-  @Id
-  @GeneratedValue(strategy=GenerationType.IDENTITY)
-  private Long id;
-  
-  @NotNull
-  @Size(min=5, message="Name must be at least 5 characters long")
-  private String name;
-  
-  private Date createdAt;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-  @ManyToMany(targetEntity=Ingredient.class)
-  @Size(min=1, message="You must choose at least 1 ingredient")
-  private List<Ingredient> ingredients;
+    @NotNull
+    @Size(min = 5, message = "Name must be at least 5 characters long")
+    private String name;
 
-  @PrePersist
-  void createdAt() {
-    this.createdAt = new Date();
-  }
+    private Date createdAt;
+
+    @ManyToMany(targetEntity = Ingredient.class)
+    @Size(min = 1, message = "You must choose at least 1 ingredient")
+    private List<Ingredient> ingredients;
+
+    @PrePersist
+    void createdAt() {
+        this.createdAt = new Date();
+    }
 }

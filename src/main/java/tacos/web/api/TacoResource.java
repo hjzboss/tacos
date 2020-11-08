@@ -2,11 +2,13 @@ package tacos.web.api;
 
 import lombok.Getter;
 import org.springframework.hateoas.ResourceSupport;
+import org.springframework.hateoas.core.Relation;
 import tacos.Taco;
 
 import java.util.Date;
 import java.util.List;
 
+@Relation(value = "taco", collectionRelation = "tacos")
 /*资源对象，继承了一个List对象的列表和管理链接列表的方法*/
 public class TacoResource extends ResourceSupport {
     private static final IngredientResourceAssembler

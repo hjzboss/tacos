@@ -10,20 +10,20 @@ import tacos.Ingredient;
 import tacos.data.IngredientRepository;
 
 @RestController
-@RequestMapping(path="/ingredientsx", produces="application/json")
-@CrossOrigin(origins="*")
+@RequestMapping(path = "/ingredientsx", produces = "application/json")
+@CrossOrigin(origins = "*")
 public class IngredientController {
 
-  private IngredientRepository repo;
+    private final IngredientRepository repo;
 
-  @Autowired
-  public IngredientController(IngredientRepository repo) {
-    this.repo = repo;
-  }
+    @Autowired
+    public IngredientController(IngredientRepository repo) {
+        this.repo = repo;
+    }
 
-  @GetMapping
-  public Iterable<Ingredient> allIngredients() {
-    return repo.findAll();
-  }
-  
+    @GetMapping
+    public Iterable<Ingredient> allIngredients() {
+        return repo.findAll();
+    }
+
 }
