@@ -9,6 +9,7 @@ public class RegistrationForm {
 
     private String username;
     private String password;
+    private String confirm;
     private String fullname;
     private String street;
     private String city;

@@ -49,7 +49,6 @@ public class OrderController {
         return "orderForm";
     }
 
-    // tag::processOrderWithAuthenticationPrincipal[]
     @PostMapping
     public String processOrder(@Valid Order order, Errors errors,
                                SessionStatus sessionStatus,
@@ -66,7 +65,6 @@ public class OrderController {
 
         return "redirect:/";
     }
-    // end::processOrderWithAuthenticationPrincipal[]
 
     @GetMapping
     public String ordersForUser(

@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import tacos.data.UserRepository;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 @RequestMapping("/register")
 public class RegistrationController {
@@ -26,7 +28,13 @@ public class RegistrationController {
     }
 
     @PostMapping
-    public String processRegistration(RegistrationForm form) {
+    public String processRegistration(RegistrationForm form,
+                                      HttpServletRequest request) {
+        if(!form.getConfirm().equals(form.getPassword())){
+            request.setAttribute("msg",
+                    "Your confirmed password and new password do not match.");
+            return "registration";
+        }
         userRepo.save(form.toUser(passwordEncoder));
         return "redirect:/login";
     }
