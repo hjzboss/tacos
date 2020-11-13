@@ -9,3 +9,7 @@ spring:
   data:
     rest:
       base-path: /api
+
+  discount:
+    codes:
+      abcdef: 10

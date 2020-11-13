@@ -18,7 +18,7 @@
         <input type="password" name="password"/><br/>
 
         <label for="confirm">Confirm password: </label>
-        <input type="password" name="confirm"/><br/>
+        <input type="password" name="confirm"/><span style="color:red" th:text="${#httpServletRequest.getAttribute('msg')}"/> <br/>
 
         <label for="fullname">Full name: </label>
         <input type="text" name="fullname"/><br/>
