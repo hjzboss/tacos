@@ -1,15 +1,28 @@
-logging:
-  level:
-    tacos: WARN
-taco:
-  orders:
-    pageSize: 10
-
 spring:
   data:
     rest:
       base-path: /api
 
-  discount:
-    codes:
-      abcdef: 10
+  datasource:
+    url: jdbc:mysql://localhost:3306/tacocloud1?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: hjznb
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat,wall,log4j     #druid监控配置
+    dbcp2:
+      min-idle: 5         #数据库连接池的最小维持连接数
+      initial-size: 5     #初始化提供的连接数
+      max-total: 5          #最大的连接数
+      max-wait-millis: 200        #等待连接获取的最大超时时间
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+
+logging:
+  level:
+    tacos: DEBUG
+
+taco:
+  orders:
+    pageSize: 10
