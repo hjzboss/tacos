@@ -21,13 +21,11 @@ import static org.junit.Assert.assertEquals;
 @Slf4j
 public class RestfulTest {
 
+    private static HtmlUnitDriver browser;
     @Autowired
     TestRestTemplate rest;
-
     @LocalServerPort
     private int port;
-
-    private static HtmlUnitDriver browser;
 
     @BeforeClass
     public static void setup() {
@@ -42,7 +40,7 @@ public class RestfulTest {
     }
 
     @Test
-    public void test(){
+    public void test() {
         Taco get = rest.getForObject(getUrl(),
                 Taco.class);
         assertEquals(get.toString(),

@@ -29,7 +29,7 @@ public class MessagingConfig {
 
     //指定消息目的地
     @Bean
-    public Destination orderQueue(){
+    public Destination orderQueue() {
         return new ActiveMQQueue("tacocloud.order.queue");
     }
 

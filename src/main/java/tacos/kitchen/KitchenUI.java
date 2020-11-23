@@ -8,8 +8,8 @@ import tacos.Order;
 @Slf4j
 public class KitchenUI {
 
-  public void displayOrder(Order order) {
-    log.info("RECEIVED ORDER:  " + order);
-  }
-  
+    public void displayOrder(Order order) {
+        log.info("RECEIVED ORDER:  " + order);
+    }
+
 }

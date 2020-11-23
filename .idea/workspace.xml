@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f3dbe075-e535-4a8f-b97f-1b2bf86095fa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/tacos/kitchen/KitchenUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tacos/kitchen/KitchenUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tacos/kitchen/messaging/jms/JmsOrderReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tacos/kitchen/messaging/jms/JmsOrderReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tacos/kitchen/messaging/jms/listener/OrderListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tacos/kitchen/messaging/jms/listener/OrderListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tacos/messaging/JmsOrderMessagingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tacos/messaging/JmsOrderMessagingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tacos/messaging/MessagingConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tacos/messaging/MessagingConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/design.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/design.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/discountList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/discountList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/orderList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/orderList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tacos/RestfulTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tacos/RestfulTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\.m2\repository" />
+        <option name="mavenHome" value="D:\IntelliJ IDEA 2020.2\plugins\maven\lib\maven3" />
+        <option name="userSettingsFile" value="D:\.m2\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kgXhuBSZoOXezZ5twEWvfYb6ho" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="TacoCloudApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="test" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tacos.TacoCloudApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3dbe075-e535-4a8f-b97f-1b2bf86095fa" name="Default Changelist" comment="" />
+      <created>1606123332479</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606123332479</updated>
+      <workItem from="1606123333609" duration="331000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -8,7 +8,7 @@ import javax.jms.Destination;
 import javax.jms.JMSException;
 
 @Component
-public class JmsOrderReceiver implements OrderReceiver{
+public class JmsOrderReceiver implements OrderReceiver {
     private final JmsTemplate jms;
     private final Destination des;
 

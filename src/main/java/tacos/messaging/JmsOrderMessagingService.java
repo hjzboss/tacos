@@ -24,7 +24,7 @@ public class JmsOrderMessagingService implements OrderMessagingService {
         //第一个参数为目的地
         //第二个参数为对象，jms会使用MappingJackson2MessageConverter来将对象转换为消息
         //第三个参数表示对消息的后期处理
-        jms.convertAndSend(orderQueue,order,this::addOrderSource);
+        jms.convertAndSend(orderQueue, order, this::addOrderSource);
     }
 
     //将消息加上额外的信息，在这里给订单消息加上了来源，来自web
