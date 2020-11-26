@@ -1,0 +1,20 @@
+logging:
+  level:
+    tacos: WARN
+taco:
+  orders:
+    pageSize: 10
+  discount:
+    codes:
+      abcdef: 10
+spring:
+  data:
+    rest:
+      base-path: /api
+  #创建到artemis代理的连接，该artemis代理监听artemis.tacocloud.com的61617端口
+  #artemis:
+   # host: artemis.tacocloud.com
+    #port: 61617
+    #user: admin
+    #password: admin
+
