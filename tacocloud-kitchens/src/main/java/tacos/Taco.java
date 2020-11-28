@@ -8,10 +8,10 @@ import lombok.Data;
 @Data
 public class Taco {
 
-  private String name;
-  
-  private Date createdAt;
+    private String name;
 
-  private List<Ingredient> ingredients;
+    private Date createdAt;
+
+    private List<Ingredient> ingredients;
 
 }

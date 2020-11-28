@@ -7,6 +7,9 @@ import tacos.Order;
 import javax.jms.Destination;
 import javax.jms.JMSException;
 
+/**
+ * 拉取模式
+ */
 @Component
 public class JmsOrderReceiver implements OrderReceiver {
     private final JmsTemplate jms;

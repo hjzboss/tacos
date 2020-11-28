@@ -5,10 +5,12 @@ import org.springframework.stereotype.Component;
 import tacos.Order;
 import tacos.kitchen.KitchenUI;
 
+/**
+ * 消息监听器
+ */
 @Component
 public class OrderListener {
     private final KitchenUI ui;
-
 
     public OrderListener(KitchenUI ui) {
         this.ui = ui;
