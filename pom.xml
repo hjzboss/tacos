@@ -41,6 +41,8 @@
         <module>tacocloud-messaging-jms</module>
         <module>tacos</module>
         <module>tacocloud-ui</module>
+        <module>tacocloud-ui</module>
+        <module>tacocloud-vue</module>
     </modules>
 
 
