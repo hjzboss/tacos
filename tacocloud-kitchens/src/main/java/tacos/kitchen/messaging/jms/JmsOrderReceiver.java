@@ -1,28 +1,27 @@
 package tacos.kitchen.messaging.jms;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Component;
 import tacos.Order;
+import tacos.kitchen.messaging.OrderReceiver;
 
-import javax.jms.Destination;
-import javax.jms.JMSException;
 
 /**
  * 拉取模式
  */
+@Profile("jms-template")
 @Component
 public class JmsOrderReceiver implements OrderReceiver {
     private final JmsTemplate jms;
-    private final Destination des;
 
-    public JmsOrderReceiver(JmsTemplate jms, Destination des) {
+    public JmsOrderReceiver(JmsTemplate jms) {
         this.jms = jms;
-        this.des = des;
     }
 
     @Override
-    public Order receiveOrder() throws JMSException {
-        return (Order) jms.receiveAndConvert(des);
+    public Order receiveOrder() {
+        return (Order) jms.receiveAndConvert("tacocloud.order.queue");
     }
 
 }

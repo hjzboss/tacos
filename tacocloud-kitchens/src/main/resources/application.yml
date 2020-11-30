@@ -1,0 +1,31 @@
+server:
+  port: 8081
+spring:
+  profiles:
+    active: jms-template
+---
+#jms配置
+spring:
+  profiles: jms-template, jms-listener
+  jms:
+    template:
+      #该属性为等待时长
+      receive-timeout: 30000
+  artemis:
+    host: localhost
+    port: 61616
+    user: tacoweb
+    password: letm31n
+    embedded:
+      enabled: false
+---
+#rabbitmq
+spring:
+  profiles: rabbitmq-template, rabbitmq-listener
+  rabbitmq:
+    template:
+      receive-timeout: 30000
+    host: localhost
+    port: 5673
+    username: tacoweb
+    password: letm31n

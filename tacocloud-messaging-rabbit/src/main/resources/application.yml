@@ -1,0 +1,8 @@
+server:
+  port: 8082
+spring:
+  rabbitmq:
+    template:
+      #指明默认的路由键和exchange
+      exchange: tacocloud.orders
+      routing-key: kitchens.central
