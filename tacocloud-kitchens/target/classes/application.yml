@@ -2,12 +2,14 @@ server:
   port: 8081
 spring:
   profiles:
-    active: jms-template
+    active: rabbitmq-listener
 ---
+#jms配置
 spring:
   profiles: jms-template, jms-listener
   jms:
     template:
+      #该属性为等待时长
       receive-timeout: 30000
   artemis:
     host: localhost
@@ -17,14 +19,15 @@ spring:
     embedded:
       enabled: false
 ---
-
+#rabbitmq
 spring:
   profiles: rabbitmq-template, rabbitmq-listener
   rabbitmq:
     template:
       receive-timeout: 30000
-      
-      
-      
-      
-      
+    #配置访问代理
+    host: localhost
+    port: 5673
+    #访问rabbitmq的默认用户名和密码
+    username: guest
+    password: guest

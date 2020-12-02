@@ -30,3 +30,26 @@ druid控制台打不开：在SecurityConfig中配置忽略/druid/**，在入口�
 或者加入@EnableConfigurationProperties注解
 
 测试通不过的原因：信用卡号的验证被我改成了notblank，所以测试中结果不正确，输入错误的结果也通过
+
+
+jms:1.要先启动artemis才能运行
+    2.接收端（拉取模式）接收不到消息，因为等待时间太短，设置一下超时时间即可
+
+rabbitmq：1.首先安装rabbitmq和erlang，然后使用rabbitmq-server.bat启动rabbitmq
+          2.http://localhost:15672/访问控制台，用户名和密码都是guest
+
+          3.（拉取模式）发送消息时报错，说没有对应的exchange；在接收消息时报错，说没有对应的queue
+          解决方法：
+            在使用rabbitmq时，书上的步骤是错的，需要先创建消息队列和exchange，
+            并将它们和routingKey绑定，否则会接收不到消息！
+
+          4.（拉取模式）接收端报错：Connection refused: connect
+          解决方法：
+          在配置文件中加入如下配置：{rabbit, [{tcp_listeners, [5673]}]}
+
+          5.发送端报错：Connection refused: connect
+          解决方法：
+          其尝试去连接5672端口，而不是5673，需要在其配置文件中配置一下端口
+                spring:
+                  rabbitmq:
+                    port: 5673

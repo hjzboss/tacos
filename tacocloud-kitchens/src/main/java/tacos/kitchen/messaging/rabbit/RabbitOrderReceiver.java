@@ -5,16 +5,15 @@ import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import tacos.Order;
+import tacos.kitchen.messaging.OrderReceiver;
 
 @Profile("rabbitmq-template")
 @Component
-public class RabbitOrderReceiver {
+public class RabbitOrderReceiver implements OrderReceiver {
     private final RabbitTemplate rabbit;
-    private final MessageConverter converter;
 
-    public RabbitOrderReceiver(RabbitTemplate rabbit, MessageConverter converter) {
+    public RabbitOrderReceiver(RabbitTemplate rabbit) {
         this.rabbit = rabbit;
-        this.converter = converter;
     }
 
     public Order receiveOrder() {
