@@ -2,7 +2,7 @@ server:
   port: 8081
 spring:
   profiles:
-    active: rabbitmq-listener
+    active: kafka-listener
 ---
 #jms配置
 spring:
@@ -31,3 +31,18 @@ spring:
     #访问rabbitmq的默认用户名和密码
     username: guest
     password: guest
+
+---
+spring:
+  profiles: kafka-listener
+  kafka:
+    bootstrap-servers:
+      - localhost:9092
+    template:
+      default-topic: tacocloud.orders.topic
+    consumer:
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      group-id: tacocloud_kitchen
+      properties:
+        spring.json.trusted.packages: tacos
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer

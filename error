@@ -11,7 +11,8 @@ log4j报错：No appenders could be found for logger
 druid控制台打不开：在SecurityConfig中配置忽略/druid/**，在入口类添加支持Servlet的注解@ServletComponentScan
 
 配置druid连接池： 1.添加druid依赖，log4j的依赖
-                2.在配置文件中添加如下字段    dbcp2:
+                2.在配置文件中添加如下字段
+                                    dbcp2:
                                     min-idle: 5         #数据库连接池的最小维持连接数
                                     initial-size: 5     #初始化提供的连接数
                                     max-total: 5          #最大的连接数

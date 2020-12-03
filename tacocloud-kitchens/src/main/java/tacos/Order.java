@@ -1,16 +1,15 @@
 package tacos;
 
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
-
 @Data
 public class Order {
 
-    private Date placedAt;
+//    private Date placedAt;
     private String deliveryName;
     private String deliveryStreet;
     private String deliveryCity;
@@ -19,7 +18,11 @@ public class Order {
 
     private List<Taco> tacos = new ArrayList<>();
 
-    public Order(Date placedAt) {
-        this.placedAt = placedAt;
+//    public Order(Date placedAt) {
+//        this.placedAt = placedAt;
+//    }
+
+    public Order(String deliveryName){
+        this.deliveryName = deliveryName;
     }
 }
