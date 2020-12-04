@@ -5,10 +5,10 @@ import org.springframework.stereotype.Service;
 import tacos.Order;
 
 @Service
-public class KafkaOrderMessagingService implements OrderMessagingService{
-    private final KafkaTemplate<String,Order> kafkaTemplate;
+public class KafkaOrderMessagingService implements OrderMessagingService {
+    private final KafkaTemplate kafkaTemplate;
 
-    public KafkaOrderMessagingService(KafkaTemplate<String, Order> kafkaTemplate) {
+    public KafkaOrderMessagingService(KafkaTemplate kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
     }
 

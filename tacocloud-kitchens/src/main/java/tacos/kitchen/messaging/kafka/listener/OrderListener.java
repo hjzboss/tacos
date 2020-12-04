@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 import tacos.Order;
 import tacos.kitchen.KitchenUI;
 
+import java.util.Optional;
+
 @Profile("kafka-listener")
 @Component
 @Slf4j
@@ -19,9 +21,15 @@ public class OrderListener {
     }
 
     @KafkaListener(topics = "tacocloud.orders.topic")
-    public void handle(Order order, ConsumerRecord<String, Order> record){
+    public void handle(Order order, ConsumerRecord<?,?> record){
         log.info("Received from partition {} with timestamp {}",
                 record.partition(), record.timestamp());
-        ui.displayOrder(order);
+        Optional<?> kafkaMessage = Optional.ofNullable(record.value());
+        if(kafkaMessage.isPresent()){
+            //得到Optional实例中的值
+            Object message = kafkaMessage.get();
+            ui.displayOrder((Order) message);
+        }
+
     }
 }

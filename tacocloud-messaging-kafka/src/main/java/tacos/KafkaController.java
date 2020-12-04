@@ -17,9 +17,9 @@ public class KafkaController {
     }
 
     @GetMapping("/send")
-    public String sendMessage(){
+    public String sendMessage() {
         System.out.println("-----send-----");
-        service.sendOrder(new Order("new Date()"));
+        service.sendOrder(new Order("fuck", new Date()));
         return "发送成功！";
     }
 }

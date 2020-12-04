@@ -41,8 +41,10 @@ spring:
     template:
       default-topic: tacocloud.orders.topic
     consumer:
+      #value使用json转换
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       group-id: tacocloud_kitchen
       properties:
         spring.json.trusted.packages: tacos
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+

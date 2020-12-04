@@ -7,6 +7,7 @@ spring:
       default-topic: tacocloud.orders.topic
     # 指定消息key和消息体的编解码方式
     producer:
+      #发出去的对象会转换为json
       keySerializer: org.springframework.kafka.support.serializer.JsonSerializer
       valueSerializer: org.springframework.kafka.support.serializer.JsonSerializer
 server:

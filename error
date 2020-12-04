@@ -22,19 +22,19 @@ druid控制台打不开：在SecurityConfig中配置忽略/druid/**，在入口�
 使用@ConfigurationProperties(prefix = "taco.orders")时报springboot configuration processor not configured
 原因：spring默认使用yml中的配置，
         但有时候要用传统的xml或properties配置，就需要使用spring-boot-configuration-processor了
-解决方法1：在pom文件中加入如下依赖：
+解决方法：在pom文件中加入如下依赖：
             		<dependency>
             			<groupId>org.springframework.boot</groupId>
             			<artifactId>spring-boot-configuration-processor</artifactId>
             			<optional>true</optional>
             		</dependency>
-或者加入@EnableConfigurationProperties注解
+        或者加入@EnableConfigurationProperties注解
 
 测试通不过的原因：信用卡号的验证被我改成了notblank，所以测试中结果不正确，输入错误的结果也通过
 
 
-jms:1.要先启动artemis才能运行
-    2.接收端（拉取模式）接收不到消息，因为等待时间太短，设置一下超时时间即可
+jms:    1.要先启动artemis才能运行
+        2.接收端（拉取模式）接收不到消息，因为等待时间太短，设置一下超时时间即可
 
 rabbitmq：1.首先安装rabbitmq和erlang，然后使用rabbitmq-server.bat启动rabbitmq
           2.http://localhost:15672/访问控制台，用户名和密码都是guest
@@ -54,3 +54,8 @@ rabbitmq：1.首先安装rabbitmq和erlang，然后使用rabbitmq-server.bat启�
                 spring:
                   rabbitmq:
                     port: 5673
+
+kafka:    1.报错：no delegate- or property-based Creator
+            解决方法：给序列化的对象添加一个空构造函数
+          2.消费者消费不了消息：配置的编码格式有问题
+          3.启动kafka之前先启动zookeeper
