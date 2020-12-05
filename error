@@ -1,6 +1,20 @@
 连接mysql报错：Public Key Retrieval is not allowed
 解决方法：mysql配置加上allowPublicKeyRetrieval=true，但是不安全
 
+maven每次导入都要更改jdk
+解决方法：在pom文件中添加如下配置
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>3.6.1</version>
+                        <configuration>
+                            <source>1.8</source>
+                            <target>1.8</target>
+                        </configuration>
+                    </plugin>
+                </plugins>
+
 log4j报错：No appenders could be found for logger
 解决方法：添加log4j配置文件
         log4j.rootLogger=DEBUG, stdout
