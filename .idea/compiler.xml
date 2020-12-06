@@ -7,19 +7,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="tacocloud-security" />
-        <module name="tacocloud-kitchens" />
         <module name="tacocloud-restclient" />
-        <module name="tacocloud-api" />
         <module name="tacocloud-messaging-jms" />
         <module name="tacocloud-domain" />
         <module name="tacos" />
+        <module name="tacocloud-vue" />
         <module name="tacocloud-data" />
+        <module name="simple-flow" />
+        <module name="tacocloud-messaging-rabbit" />
+        <module name="tacocloud-security" />
+        <module name="tacocloud-kitchens" />
+        <module name="tacocloud-api" />
         <module name="tacocloud-messaging-kafka" />
         <module name="tacocloud-web" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="tacocloud-restclient" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -29,8 +34,10 @@
       <module name="tacocloud-kitchens" options="-parameters" />
       <module name="tacocloud-messaging-jms" options="-parameters" />
       <module name="tacocloud-messaging-kafka" options="-parameters" />
+      <module name="tacocloud-messaging-rabbit" options="-parameters" />
       <module name="tacocloud-restclient" options="-parameters" />
       <module name="tacocloud-security" options="-parameters" />
+      <module name="tacocloud-vue" options="-parameters" />
       <module name="tacocloud-web" options="-parameters" />
       <module name="tacos" options="-parameters" />
     </option>

@@ -40,7 +40,7 @@
         <module>tacocloud-kitchens</module>
         <module>tacocloud-messaging-jms</module>
         <module>tacos</module>
-        <module>tacocloud-vue</module>
+        <module>tacocloud-ui</module>
         <module>tacocloud-messaging-rabbit</module>
     </modules>
 

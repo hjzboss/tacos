@@ -7,8 +7,9 @@
     <file url="file://$PROJECT_DIR$/tacocloud-kitchens/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tacocloud-messaging-jms/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tacocloud-messaging-kafka/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tacocloud-restclient/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tacocloud-messaging-rabbit/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tacocloud-security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tacocloud-ui/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tacocloud-web/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tacos/src/main/java" charset="UTF-8" />
   </component>
