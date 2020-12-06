@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: javadsl
+
+---
+spring:
+  profiles: javaconfig
+---
+spring:
+  profiles: javadsl

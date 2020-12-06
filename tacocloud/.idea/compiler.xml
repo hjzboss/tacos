@@ -7,7 +7,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="tacocloud-restclient" />
         <module name="tacocloud-messaging-jms" />
         <module name="tacocloud-domain" />
         <module name="tacos" />
@@ -28,6 +27,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="simple-flow" options="-parameters" />
       <module name="tacocloud-api" options="-parameters" />
       <module name="tacocloud-data" options="-parameters" />
       <module name="tacocloud-domain" options="-parameters" />
