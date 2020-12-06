@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/simple-flow/simple-flow.iml" filepath="$PROJECT_DIR$/simple-flow/simple-flow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-api/tacocloud-api.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-api/tacocloud-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-data/tacocloud-data.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-data/tacocloud-data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-domain/tacocloud-domain.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-domain/tacocloud-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-kitchens/tacocloud-kitchens.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-kitchens/tacocloud-kitchens.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-messaging-jms/tacocloud-messaging-jms.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-messaging-jms/tacocloud-messaging-jms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-messaging-kafka/tacocloud-messaging-kafka.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-messaging-kafka/tacocloud-messaging-kafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-messaging-rabbit/tacocloud-messaging-rabbit.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-messaging-rabbit/tacocloud-messaging-rabbit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-security/tacocloud-security.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-security/tacocloud-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-ui/tacocloud-vue.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-ui/tacocloud-vue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-web/tacocloud-web.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-web/tacocloud-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/tacoo.iml" filepath="$PROJECT_DIR$/.idea/tacoo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tacocloud/tacos/tacos.iml" filepath="$PROJECT_DIR$/tacocloud/tacos/tacos.iml" />
+    </modules>
+  </component>
+</project>

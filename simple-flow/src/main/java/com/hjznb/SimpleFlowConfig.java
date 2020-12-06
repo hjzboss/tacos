@@ -42,7 +42,7 @@ public class SimpleFlowConfig {
     @ServiceActivator(inputChannel = "fileWriterChannel")
     public FileWritingMessageHandler fileWriter() {
         FileWritingMessageHandler handler =
-                new FileWritingMessageHandler(new File("D:\\simple-flow\\src\\main\\java\\com\\hjznb"));
+                new FileWritingMessageHandler(new File("D:\\tacoo\\simple-flow\\src\\main\\java\\com\\hjznb"));
         //设置无答复通道
         handler.setExpectReply(false);
         //设置为追加
@@ -78,7 +78,7 @@ public class SimpleFlowConfig {
         return IntegrationFlows
                 .from(MessageChannels.direct("textInChannel"))
                 .<String, String>transform(t -> t.toUpperCase())
-                .handle(Files.outboundAdapter(new File("D:\\simple-flow\\src\\main\\java\\com\\hjznb"))
+                .handle(Files.outboundAdapter(new File("D:\\tacoo\\simple-flow\\src\\main\\java\\com\\hjznb"))
                         .fileExistsMode(FileExistsMode.APPEND)
                         .appendNewLine(true))
                 .get();
