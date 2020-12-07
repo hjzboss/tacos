@@ -2,22 +2,24 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="tacocloud-messaging-rabbit" />
-        <module name="tacocloud-security" />
-        <module name="tacocloud-kitchens" />
         <module name="tacocloud-messaging-jms" />
-        <module name="tacocloud-api" />
         <module name="tacocloud-vue" />
         <module name="tacocloud-domain" />
         <module name="tacos" />
-        <module name="tacocloud-messaging-kafka" />
         <module name="tacocloud-data" />
-        <module name="tacocloud-web" />
         <module name="simple-flow" />
+        <module name="tacocloud-email" />
+        <module name="tacocloud-messaging-rabbit" />
+        <module name="tacocloud-security" />
+        <module name="tacocloud-kitchens" />
+        <module name="tacocloud-api" />
+        <module name="tacocloud-messaging-kafka" />
+        <module name="tacocloud-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -26,6 +28,7 @@
       <module name="tacocloud-api" target="1.8" />
       <module name="tacocloud-data" target="1.8" />
       <module name="tacocloud-domain" target="1.8" />
+      <module name="tacocloud-email" target="1.8" />
       <module name="tacocloud-kitchens" target="1.8" />
       <module name="tacocloud-messaging-jms" target="1.8" />
       <module name="tacocloud-messaging-kafka" target="1.8" />
@@ -42,6 +45,7 @@
       <module name="tacocloud-api" options="-parameters" />
       <module name="tacocloud-data" options="-parameters" />
       <module name="tacocloud-domain" options="-parameters" />
+      <module name="tacocloud-email" options="-parameters" />
       <module name="tacocloud-kitchens" options="-parameters" />
       <module name="tacocloud-messaging-jms" options="-parameters" />
       <module name="tacocloud-messaging-kafka" options="-parameters" />

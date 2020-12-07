@@ -5,6 +5,7 @@
     <file url="file://$PROJECT_DIR$/tacocloud/tacocloud-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tacocloud/tacocloud-data/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tacocloud/tacocloud-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tacocloud/tacocloud-email/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tacocloud/tacocloud-kitchens/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tacocloud/tacocloud-messaging-jms/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tacocloud/tacocloud-messaging-kafka/src/main/java" charset="UTF-8" />

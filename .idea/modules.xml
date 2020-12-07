@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-api/tacocloud-api.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-api/tacocloud-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-data/tacocloud-data.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-data/tacocloud-data.iml" />
       <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-domain/tacocloud-domain.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-domain/tacocloud-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-email/tacocloud-email.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-email/tacocloud-email.iml" />
       <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-kitchens/tacocloud-kitchens.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-kitchens/tacocloud-kitchens.iml" />
       <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-messaging-jms/tacocloud-messaging-jms.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-messaging-jms/tacocloud-messaging-jms.iml" />
       <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-messaging-kafka/tacocloud-messaging-kafka.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-messaging-kafka/tacocloud-messaging-kafka.iml" />

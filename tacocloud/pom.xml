@@ -35,6 +35,7 @@
         <module>tacocloud-kitchens</module>
         <module>tacocloud-ui</module>
         <module>tacocloud-messaging-rabbit</module>
+        <module>tacocloud-email</module>
     </modules>
 
 

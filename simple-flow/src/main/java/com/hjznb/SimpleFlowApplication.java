@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 
+import java.util.Map;
+
 @SpringBootApplication
 public class SimpleFlowApplication {
 
