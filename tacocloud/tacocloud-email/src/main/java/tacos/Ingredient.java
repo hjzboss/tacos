@@ -7,10 +7,10 @@ import lombok.RequiredArgsConstructor;
 
 @Data
 @RequiredArgsConstructor
-@NoArgsConstructor(access=AccessLevel.PRIVATE, force=true)
+@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 public class Ingredient {
-  
-  private final String code;
-  private final String name;
+
+    private final String code;
+    private final String name;
 
 }

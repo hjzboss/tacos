@@ -8,13 +8,13 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class TacoEmailApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(TacoEmailApplication.class, args);
-	}
-	
-	@Bean
-	public RestTemplate restTemplate() {
-	  return new RestTemplate();
-	}
-	
+    public static void main(String[] args) {
+        SpringApplication.run(TacoEmailApplication.class, args);
+    }
+
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+
 }

@@ -13,18 +13,17 @@ import lombok.RequiredArgsConstructor;
 
 @Entity
 @Data
-@NoArgsConstructor(force=true, access=AccessLevel.PRIVATE)
+@NoArgsConstructor(force = true, access = AccessLevel.PRIVATE)
 @RequiredArgsConstructor
 public class PaymentMethod {
 
-  @Id
-  @GeneratedValue(strategy=GenerationType.AUTO)
-  private long id;
-  
-  @ManyToOne
-  private final User user;
-  private final String ccNumber;
-  private final String ccCVV;
-  private final String ccExpiration;
-  
+    @ManyToOne
+    private final User user;
+    private final String ccNumber;
+    private final String ccCVV;
+    private final String ccExpiration;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
 }

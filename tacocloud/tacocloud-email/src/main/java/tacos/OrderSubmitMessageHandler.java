@@ -1,11 +1,8 @@
 package tacos;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.integration.handler.GenericHandler;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
-
-import javax.annotation.Resource;
 import java.util.Map;
 
 @Component

@@ -1,0 +1,48 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "tacos.ApiProperties",
+      "name": "tacocloud.api",
+      "type": "tacos.ApiProperties"
+    },
+    {
+      "sourceType": "tacos.EmailProperties",
+      "name": "tacocloud.email",
+      "type": "tacos.EmailProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "tacos.ApiProperties",
+      "name": "tacocloud.api.url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "tacos.EmailProperties",
+      "name": "tacocloud.email.host",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "tacos.EmailProperties",
+      "name": "tacocloud.email.mailbox",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "tacos.EmailProperties",
+      "name": "tacocloud.email.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "tacos.EmailProperties",
+      "defaultValue": 30000,
+      "name": "tacocloud.email.poll-rate",
+      "type": "java.lang.Long"
+    },
+    {
+      "sourceType": "tacos.EmailProperties",
+      "name": "tacocloud.email.username",
+      "type": "java.lang.String"
+    }
+  ]
+}
