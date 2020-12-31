@@ -11,7 +11,6 @@
     <file url="file://$PROJECT_DIR$/tacocloud/tacocloud-messaging-kafka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tacocloud/tacocloud-messaging-rabbit/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tacocloud/tacocloud-security/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tacocloud/tacocloud-ui/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tacocloud/tacocloud-web/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tacocloud/tacos/src/main/java" charset="UTF-8" />
   </component>

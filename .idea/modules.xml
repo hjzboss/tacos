@@ -13,7 +13,6 @@
       <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-messaging-kafka/tacocloud-messaging-kafka.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-messaging-kafka/tacocloud-messaging-kafka.iml" />
       <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-messaging-rabbit/tacocloud-messaging-rabbit.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-messaging-rabbit/tacocloud-messaging-rabbit.iml" />
       <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-security/tacocloud-security.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-security/tacocloud-security.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-ui/tacocloud-vue.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-ui/tacocloud-vue.iml" />
       <module fileurl="file://$PROJECT_DIR$/tacocloud/tacocloud-web/tacocloud-web.iml" filepath="$PROJECT_DIR$/tacocloud/tacocloud-web/tacocloud-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/tacoo.iml" filepath="$PROJECT_DIR$/.idea/tacoo.iml" />
       <module fileurl="file://$PROJECT_DIR$/tacocloud/tacos/tacos.iml" filepath="$PROJECT_DIR$/tacocloud/tacos/tacos.iml" />

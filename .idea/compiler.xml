@@ -8,7 +8,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="tacocloud-messaging-jms" />
-        <module name="tacocloud-vue" />
         <module name="tacocloud-domain" />
         <module name="tacos" />
         <module name="tacocloud-data" />
