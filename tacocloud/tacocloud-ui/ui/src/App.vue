@@ -1,23 +1,41 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <el-container>
+      <el-header>
+        <el-menu
+          :default-active="activeIndex"
+          class="el-menu-demo"
+          mode="horizontal"
+          @select="handleSelect"
+          background-color="#545c64"
+          text-color="#fff"
+          active-text-color="#ffd04b">
+          <el-menu-item index="/home">主页</el-menu-item>
+          <el-menu-item index="/search">订单查询</el-menu-item>
+          <el-menu-item index="/order">创建订单</el-menu-item>
+        </el-menu>
+      </el-header>
+      <el-main><router-view/></el-main>
+    </el-container>
+
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data() {
+    return {
+      activeIndex: '/home',
+    };
+  },
+  methods: {
+    handleSelect(key, keyPath) {
+        this.$router.push(key);
+    }
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
