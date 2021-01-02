@@ -32,7 +32,7 @@ public class DesignTacoController1 {
     /*返回最近12条订单信息，按时间降序排列*/
     @GetMapping("/recent")
     public Resources<TacoResource> recentTacos() {
-        PageRequest page = PageRequest.of(0, 3, Sort.by("createdAt").descending());
+        PageRequest page = PageRequest.of(0, 6, Sort.by("createdAt").descending());
         List<Taco> content = tacoRepository.findAll(page).getContent();
 
         List<TacoResource> tacoResources = new TacoResourceAssembler().toResources(content);

@@ -23,7 +23,7 @@ public class RecentTacoController {
 
     @GetMapping(path = "/tacos/recent", produces = "application/hal+json")
     public Resources<TacoResource> recentTacos() {
-        PageRequest page = PageRequest.of(0, 12, Sort.by("createdAt").descending());
+        PageRequest page = PageRequest.of(0, 6, Sort.by("createdAt").descending());
         List<Taco> content = tacoRepository.findAll(page).getContent();
 
         List<TacoResource> tacoResources = new TacoResourceAssembler().toResources(content);
