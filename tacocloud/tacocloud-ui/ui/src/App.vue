@@ -12,6 +12,7 @@
           active-text-color="#ffd04b">
           <el-menu-item index="/home">主页</el-menu-item>
           <el-menu-item index="/search">订单查询</el-menu-item>
+          <el-menu-item index="/recent">最近的设计</el-menu-item>
           <el-menu-item index="/order">创建订单</el-menu-item>
         </el-menu>
       </el-header>

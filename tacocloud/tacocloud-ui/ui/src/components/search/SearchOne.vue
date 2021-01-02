@@ -45,10 +45,7 @@ export default {
     search() {
       this.$http.get(this.url + this.id).then(res => {
         if (res.status == 200) {
-          console.log(res.data)
-/*          this.taco[0].id = res.data.id;
-          this.taco[0].name = res.data.name;
-          this.taco[0].ingredients = res.data.ingredients;*/
+          console.log(res.data);
           this.taco[0] = res.data;
         }
       })
