@@ -20,8 +20,8 @@ public class DruidConfig {
     public ServletRegistrationBean druidServlet() {// 主要实现web监控的配置处理
         ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(
                 new StatViewServlet(), "/druid/*");//表示进行druid监控的配置处理操作
-/*        servletRegistrationBean.addInitParameter("allow", "");//白名单
-        servletRegistrationBean.addInitParameter("deny", "");//黑名单*/
+        servletRegistrationBean.addInitParameter("allow", "");//白名单
+        servletRegistrationBean.addInitParameter("deny", "");//黑名单
         servletRegistrationBean.addInitParameter("loginUsername", "root");//用户名
         servletRegistrationBean.addInitParameter("loginPassword", "root");//密码
         servletRegistrationBean.addInitParameter("resetEnable", "false");//是否可以重置数据源
@@ -29,7 +29,8 @@ public class DruidConfig {
 
     }
 
-    @Bean    //监控
+    //配置一个web监控的filter
+    @Bean
     public FilterRegistrationBean filterRegistrationBean() {
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
         filterRegistrationBean.setFilter(new WebStatFilter());
