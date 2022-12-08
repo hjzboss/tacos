@@ -43,10 +43,10 @@ export default {
   },
   methods: {
     search() {
-      this.$http.get(this.url + this.id).then(res => {
-        if (res.status == 200) {
+      this.$http.get(this.url).then(res => {
+        if (res.status === 200) {
           console.log(res.data);
-          this.taco[0] = res.data;
+          this.taco = res.data;
         }
       })
     }
